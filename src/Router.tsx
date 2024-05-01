@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 
-import { MainLayout } from "./layouts/MainLayout";
+import { MainLayout } from "@components/templates/MainLayout";
 
 export function Router() {
   return (
