@@ -27,4 +27,10 @@
   p {
     font-family: "Inter-R", sans-serif;
   }
+
+  #root {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
 }
