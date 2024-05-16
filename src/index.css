@@ -34,3 +34,11 @@
     overflow: hidden;
   }
 }
+
+:root {
+  --main-color: blue;
+}
+
+.logo path {
+  fill: var(--main-color);
+}

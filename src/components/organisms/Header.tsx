@@ -1,5 +1,5 @@
-import { ReactComponent as Logo } from "@assets/Logo.svg";
 import { PageWidthContainer } from "@components/molecules/Container";
+import { Logo } from "@components/atoms/Logo";
 
 export function Header() {
   return (
