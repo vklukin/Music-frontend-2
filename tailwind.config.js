@@ -9,7 +9,12 @@ export default {
       laptop: "1025px",
       desktop: "1440px"
     },
-    extend: {}
+    extend: {
+      colors: {
+        main: "blue",
+        "dark-main": "cyan"
+      }
+    }
   },
   plugins: []
 };
