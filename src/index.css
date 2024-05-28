@@ -5,25 +5,26 @@
 @layer base {
   @font-face {
     font-family: "Inter-B";
-    src: url(/public/fonts/Inter-Bold.ttf);
+    src: url(/fonts/Inter-Bold.ttf);
     font-weight: 700;
   }
   @font-face {
     font-family: "Inter-M";
-    src: url(/public/fonts/Inter-Medium.ttf);
+    src: url(/fonts/Inter-Medium.ttf);
     font-weight: 500;
   }
   @font-face {
     font-family: "Inter-R";
-    src: url(/public/fonts/Inter-Regular.ttf);
+    src: url(/fonts/Inter-Regular.ttf);
     font-weight: 400;
   }
   @font-face {
     font-family: "Inter-SB";
-    src: url(/public/fonts/Inter-SemiBold.ttf);
+    src: url(/fonts/Inter-SemiBold.ttf);
     font-weight: 600;
   }
 
+  a,
   p {
     font-family: "Inter-R", sans-serif;
   }
@@ -37,8 +38,37 @@
 
 :root {
   --main-color: blue;
+
+  /* dark */
+  --dark-main-color: cyan;
 }
 
 .logo path {
   fill: var(--main-color);
+}
+
+.dark .logo path {
+  fill: var(--dark-main-color);
+}
+
+.hover-underline-animation {
+  position: relative;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+}
+
+.hover-underline-animation::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-radius: 20px;
+  background: currentColor;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.2s ease-in-out;
+  left: 0;
+  bottom: -3px;
 }
