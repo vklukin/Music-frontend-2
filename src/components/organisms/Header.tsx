@@ -5,7 +5,7 @@ import { Settings } from "@components/organisms/Settings";
 
 export function Header() {
   return (
-    <header className="flex h-10 w-full tablet:h-[60px]">
+    <header className="flex h-10 w-full shadow-md shadow-main tablet:h-[60px] dark:shadow-dark-main">
       <PageWidthContainer styles="flex justify-between items-center">
         <div className="flex h-full flex-row items-center gap-8 tablet:gap-24">
           <Logo containerStyles="h-[80%]" />
