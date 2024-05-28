@@ -18,14 +18,12 @@ const navigation: Navigation[] = [
 ];
 
 const NavigationLink = ({
-  index,
   link,
   title,
   liClassName
-}: Navigation & { index: number; liClassName?: string }) => {
+}: Navigation & { liClassName?: string }) => {
   return (
     <li
-      key={index}
       className={cn(
         "hover-underline-animation dark:text-white font-medium",
         liClassName
@@ -44,7 +42,7 @@ export const HeaderNavigation: React.FC<Props> = ({
     <ul className={cn("", ulClassName)}>
       {navigation.map(({ title, link }, index) => (
         <NavigationLink
-          index={index}
+          key={index}
           link={link}
           title={title}
           liClassName={liClassName}
