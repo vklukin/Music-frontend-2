@@ -10,14 +10,9 @@ function App() {
   });
 
   useEffect(() => {
-    if (
-      isDarkMode ||
-      (!isDarkMode && window.matchMedia("(prefers-color-scheme: dark)").matches)
-    ) {
-      document.documentElement.classList.add("dark");
-      enable();
-    }
+    if (!isDarkMode) return;
 
+    document.documentElement.classList.add("dark");
     enable();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
