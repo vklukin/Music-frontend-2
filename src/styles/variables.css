@@ -1,6 +1,11 @@
 :root {
-    --main-color: blue;
-  
-    /* dark */
-    --dark-main-color: cyan;
-  }
+  --body-font: "Inter", sans-serif;
+}
+
+/* colors */
+:root {
+  --main-color: blue;
+  --dark-main-color: cyan;
+  --sites-background-color: #fff;
+  --dark-sites-background-color: rgb(18, 21, 45);
+}

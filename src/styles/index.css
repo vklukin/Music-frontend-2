@@ -1,17 +1,49 @@
 @import "./fonts.css";
 @import "./variables.css";
 
-html {
-  font-size: 10px;
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a,
-p {
-  font-family: "Inter-R", sans-serif;
+html {
+  font-size: 10px;
 }
 
 #root {
   display: flex;
   height: 100vh;
   overflow: hidden;
+}
+
+a,
+p {
+  font-family: var(--body-font);
+}
+
+*[hidden] {
+  display: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: var(--sites-background-color);
+}
+
+html.dark body {
+  background-color: var(--dark-sites-background-color);
+}
+
+button,
+input,
+textarea {
+  background: none;
+  border: none;
+  outline: none;
 }
