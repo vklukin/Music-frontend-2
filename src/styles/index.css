@@ -19,6 +19,18 @@ html {
   overflow: hidden;
 }
 
+#modal {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+#modal:empty {
+  display: none;
+}
+
 a,
 p {
   font-family: var(--body-font);

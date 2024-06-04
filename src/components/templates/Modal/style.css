@@ -1,0 +1,22 @@
+.ui-modal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.ui-modal__backdrop {
+  z-index: 1000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-backdrop-color);
+}
+
+html.dark .ui-modal__backdrop {
+  background-color: var(--dark-modal-backdrop-color);
+}
+
+.ui-modal__content {
+  z-index: 1001;
+  position: relative;
+}

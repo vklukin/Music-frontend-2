@@ -12,6 +12,8 @@
 
   --sites-background-color: #fff;
   --dark-sites-background-color: rgb(18, 21, 45);
+  --modal-backdrop-color: rgba(0 0 0 / 0.5);
+  --dark-modal-backdrop-color: rgba(255, 255, 255, 0.5);
 
   --header-box-shadow-color: var(--main-color);
   --header-dark-box-shadow-color: var(--dark-main-color);
