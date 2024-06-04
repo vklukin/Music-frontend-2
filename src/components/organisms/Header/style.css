@@ -1,10 +1,10 @@
 .header {
-  --box-shadow-color: var(--main-color);
+  --box-shadow-color: var(--header-box-shadow-color);
 
   display: flex;
   height: 4rem;
   width: 100%;
-  box-shadow: 0px 0.3rem 0.5rem 0 var(--box-shadow-color);
+  box-shadow: 0px 0.15rem 0.5rem 0 var(--box-shadow-color);
 }
 
 @media (min-width: 768px) {
@@ -14,14 +14,13 @@
 }
 
 html.dark .header {
-  --box-shadow-color: var(--dark-main-color);
+  --box-shadow-color: var(--header-dark-box-shadow-color);
 }
 
 .header__page-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
 }
 
 .haeder__content {

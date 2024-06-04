@@ -8,5 +8,5 @@ type Props = {
 };
 
 export const PageWidthContainer: React.FC<Props> = ({ children, styles }) => {
-  return <div className={cn("page-width-containers", styles)}>{children}</div>;
+  return <div className={cn("page-width-container", styles)}>{children}</div>;
 };

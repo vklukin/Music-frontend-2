@@ -1,7 +1,6 @@
 .page-width-container {
   margin: 0 auto;
-  width: 100%;
-  padding: 0 2rem;
+  width: calc(100% - 40px);
 }
 
 @media (min-width: 1440px) {

@@ -6,6 +6,13 @@
 :root {
   --main-color: blue;
   --dark-main-color: cyan;
+
+  --text-color: #090d1d;
+  --dark-text-color: #fff;
+
   --sites-background-color: #fff;
   --dark-sites-background-color: rgb(18, 21, 45);
+
+  --header-box-shadow-color: var(--main-color);
+  --header-dark-box-shadow-color: var(--dark-main-color);
 }
