@@ -1,0 +1,17 @@
+.page-width-container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  .page-width-container {
+    padding: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .page-width-container {
+    width: 140rem;
+  }
+}

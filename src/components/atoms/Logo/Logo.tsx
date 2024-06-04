@@ -1,5 +1,7 @@
 import cn from "classnames";
+
 import { ReactComponent as LogoIcon } from "@assets/Logo.svg";
+import "./style.css";
 
 type Props = {
   containerStyles?: string;
@@ -15,9 +17,9 @@ export const Logo: React.FC<Props> = ({
   href = "/"
 }) => {
   return (
-    <div className={cn("w-32", containerStyles)}>
-      <a href={href} className={cn("h-full w-full block", linkStyles)}>
-        <LogoIcon className={cn("w-full h-full logo", iconStyles)} />
+    <div className={cn("logo", containerStyles)}>
+      <a href={href} className={cn("logo__link", linkStyles)}>
+        <LogoIcon className={cn("logo__link-icon", iconStyles)} />
       </a>
     </div>
   );

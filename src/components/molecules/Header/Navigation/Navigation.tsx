@@ -1,5 +1,7 @@
 import cn from "classnames";
 
+import "./style.css";
+
 type Props = {
   ulClassName?: string;
   liClassName?: string;
@@ -25,7 +27,7 @@ const NavigationLink = ({
   return (
     <li
       className={cn(
-        "hover-underline-animation dark:text-white font-medium",
+        "header__navigation-link navigation-link navigation-link__hover-underline-animation",
         liClassName
       )}
     >
@@ -39,7 +41,7 @@ export const HeaderNavigation: React.FC<Props> = ({
   liClassName
 }) => {
   return (
-    <ul className={cn("", ulClassName)}>
+    <ul className={cn("header__navigation", ulClassName)}>
       {navigation.map(({ title, link }, index) => (
         <NavigationLink
           key={index}
