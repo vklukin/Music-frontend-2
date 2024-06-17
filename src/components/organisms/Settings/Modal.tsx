@@ -17,7 +17,7 @@ export const SettingsModal = () => {
       classNames={{
         backdrop: "settings-modal__backdrop",
         container: "settings-modal",
-        content: "settings-modal__content"
+        content: ["settings-modal__content", "settings-modal-content"]
       }}
     >
       <div></div>

@@ -1,5 +1,10 @@
 :root {
   --body-font: "Inter", sans-serif;
+
+  --border-radius-x: 2px;
+  --border-radius-xx: 5px;
+  --border-radius-xxx: 7px;
+  --border-radius-xxxx: 10px;
 }
 
 /* colors */
@@ -16,5 +21,9 @@
   --dark-modal-backdrop-color: rgba(255, 255, 255, 0.5);
 
   --header-box-shadow-color: var(--main-color);
-  --header-dark-box-shadow-color: var(--dark-main-color);
+  --dark-header-box-shadow-color: var(--dark-main-color);
+
+  --settings-modal-bg-color: white;
+  --settings-modal-box-shadow-color: var(--main-color);
+  --dark-settings-modal-box-shadow-color: var(--dark-main-color);
 }
