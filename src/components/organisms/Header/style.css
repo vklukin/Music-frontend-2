@@ -14,7 +14,7 @@
 }
 
 html.dark .header {
-  --box-shadow-color: var(--header-dark-box-shadow-color);
+  --box-shadow-color: var(--dark-header-box-shadow-color);
 }
 
 .header__page-container {
