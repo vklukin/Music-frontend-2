@@ -2,6 +2,7 @@ import { useAtom } from "jotai";
 
 import { Modal } from "@components/templates/Modal";
 import { isSettingsModalOpen } from "@atoms/Settings";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 export const SettingsModal = () => {
   const [isOpen, setIsOpen] = useAtom(isSettingsModalOpen);
@@ -20,7 +21,7 @@ export const SettingsModal = () => {
         content: ["settings-modal__content", "settings-modal-content"]
       }}
     >
-      <div></div>
+      <ThemeSwitcher />
     </Modal>
   );
 };

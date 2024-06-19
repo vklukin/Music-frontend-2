@@ -17,21 +17,3 @@
 html.dark .settings-button__open-button-icon {
   fill: var(--dark-main-color);
 }
-
-.settings-modal-content {
-  width: 100%;
-  background: var(--settings-modal-bg-color);
-  padding: 20px;
-  border-radius: var(--border-radius-x);
-  box-shadow: 0 2px 3px var(--settings-modal-box-shadow-color);
-}
-
-@media (min-width: 540px) {
-  .settings-modal-content {
-    width: 500px;
-  }
-}
-
-html.dark .settings-modal-content {
-  box-shadow: var(--dark-settings-modal-box-shadow-color);
-}

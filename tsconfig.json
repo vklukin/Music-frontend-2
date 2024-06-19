@@ -33,7 +33,8 @@
       "@assets/*": ["./src/assets/*"],
       "@atoms/*": ["./src/core/atoms/*"],
       "@components/*": ["./src/components/*"],
-      "@utils/*": ["./src/core/utils/*"]
+      "@utils/*": ["./src/core/utils/*"],
+      "@core/*": ["./src/core/*"]
     }
   },
   "include": ["src", "./src/core/types/declarations.d.ts"],

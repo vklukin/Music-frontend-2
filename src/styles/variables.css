@@ -1,9 +1,9 @@
 :root {
   --body-font: "Inter", sans-serif;
 
-  --border-radius-x: 2px;
+  --border-radius-x: 2.5px;
   --border-radius-xx: 5px;
-  --border-radius-xxx: 7px;
+  --border-radius-xxx: 7.5px;
   --border-radius-xxxx: 10px;
 }
 
@@ -17,13 +17,17 @@
 
   --sites-background-color: #fff;
   --dark-sites-background-color: rgb(18, 21, 45);
-  --modal-backdrop-color: rgba(0 0 0 / 0.5);
-  --dark-modal-backdrop-color: rgba(255, 255, 255, 0.5);
 
   --header-box-shadow-color: var(--main-color);
   --dark-header-box-shadow-color: var(--dark-main-color);
 
-  --settings-modal-bg-color: white;
-  --settings-modal-box-shadow-color: var(--main-color);
-  --dark-settings-modal-box-shadow-color: var(--dark-main-color);
+  --modal-backdrop-color: rgba(0 0 0 / 0.5);
+  --dark-modal-backdrop-color: rgba(0, 0, 0, 0.5);
+  --modal-bg-color: white;
+  --dark-modal-bg-color: rgb(31, 37, 47);
+  --modal-box-shadow-color: var(--main-color);
+  --dark-modal-box-shadow-color: var(--dark-main-color);
+
+  --labeled-content-title-color: var(--text-color);
+  --dark-labeled-content-title-color: white;
 }
