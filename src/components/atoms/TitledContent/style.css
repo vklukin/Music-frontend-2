@@ -1,0 +1,16 @@
+.labeled-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.labeled-content__title {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--labeled-content-title-color);
+}
+
+html.dark .labeled-content__title {
+  color: var(--dark-labeled-content-title-color);
+}

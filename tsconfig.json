@@ -27,14 +27,16 @@
     "noImplicitAny": true,
     "strictPropertyInitialization": true,
     "useUnknownInCatchVariables": true,
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@assets/*": ["./src/assets/*"],
       "@atoms/*": ["./src/core/atoms/*"],
       "@components/*": ["./src/components/*"],
-      "@utils/*": ["./src/core/utils/*"]
+      "@utils/*": ["./src/core/utils/*"],
+      "@core/*": ["./src/core/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "./src/core/types/declarations.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

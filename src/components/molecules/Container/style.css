@@ -1,0 +1,10 @@
+.page-width-container {
+  margin: 0 auto;
+  width: calc(100% - 40px);
+}
+
+@media (min-width: 1440px) {
+  .page-width-container {
+    width: 140rem;
+  }
+}

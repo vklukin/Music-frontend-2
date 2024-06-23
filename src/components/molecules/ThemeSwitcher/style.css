@@ -1,0 +1,28 @@
+.theme-switcher {
+  width: 6rem;
+  height: 3rem;
+  border: 2px solid var(--theme-switcher-border-color);
+  border-radius: var(--theme-switcher-border-radius);
+  position: relative;
+  cursor: pointer;
+}
+
+html.dark .theme-switcher {
+  border-color: var(--dark-theme-switcher-border-color);
+}
+
+.theme-switcher__circle {
+  height: 2.2rem;
+  width: 2.2rem;
+  background-color: var(--theme-switcher-circle-color);
+  border-radius: var(--theme-switcher-border-radius);
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+}
+
+.theme-switcher--active .theme-switcher__circle {
+  left: auto;
+  right: 0.2rem;
+  background-color: var(--active-theme-switcher-circle-color);
+}
