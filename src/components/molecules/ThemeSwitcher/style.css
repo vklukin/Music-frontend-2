@@ -4,6 +4,7 @@
   border: 2px solid var(--theme-switcher-border-color);
   border-radius: var(--theme-switcher-border-radius);
   position: relative;
+  cursor: pointer;
 }
 
 html.dark .theme-switcher {
