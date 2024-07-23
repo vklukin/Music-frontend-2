@@ -5,6 +5,7 @@ import { Header } from "@components/organisms/Header";
 
 import { useAppHooks } from "./App.hooks";
 import "./app.css";
+import { PlayerControls } from "@components/organisms/PlayerControls";
 
 function App() {
   useAppHooks();
@@ -12,9 +13,12 @@ function App() {
   return (
     <div className="layout layout--main">
       <Header />
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+      <div className="layout__body">
+        <BrowserRouter>
+          <Router />
+        </BrowserRouter>
+      </div>
+      <PlayerControls />
     </div>
   );
 }
