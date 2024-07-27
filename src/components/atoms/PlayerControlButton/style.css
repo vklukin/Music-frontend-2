@@ -2,10 +2,15 @@
   width: 28px;
   height: 28px;
   color: var(--player-controls-button-color);
+  transition: opacity 0.2s ease;
 }
 
 html.dark .player-control-button {
-    color: var(--dark-player-controls-button-color);
+  color: var(--dark-player-controls-button-color);
+}
+
+.player-control-button:hover {
+  opacity: 0.7;
 }
 
 .player-control-button svg {
