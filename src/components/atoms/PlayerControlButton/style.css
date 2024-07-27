@@ -1,0 +1,15 @@
+.player-control-button {
+  width: 28px;
+  height: 28px;
+  color: var(--player-controls-button-color);
+}
+
+html.dark .player-control-button {
+    color: var(--dark-player-controls-button-color);
+}
+
+.player-control-button svg {
+  color: inherit;
+  width: 24px;
+  height: 24px;
+}

@@ -29,7 +29,7 @@
   --dark-modal-bg-color: rgb(31, 37, 47);
   --modal-box-shadow-color: var(--main-color);
   --dark-modal-box-shadow-color: var(--dark-main-color);
-
+ 
   --labeled-content-title-color: var(--text-color);
   --dark-labeled-content-title-color: white;
 
@@ -38,4 +38,7 @@
   --theme-switcher-border-radius: 50px;
   --theme-switcher-circle-color: var(--main-color);
   --active-theme-switcher-circle-color: var(--dark-main-color);
+
+  --player-controls-button-color: var(--main-color);
+  --dark-player-controls-button-color: var(--dark-main-color);
 }
