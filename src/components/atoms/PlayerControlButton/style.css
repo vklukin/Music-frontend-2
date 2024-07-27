@@ -1,6 +1,6 @@
 .player-control-button {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   color: var(--player-controls-button-color);
   transition: opacity 0.2s ease;
   cursor: pointer;
@@ -18,4 +18,11 @@ html.dark .player-control-button {
   color: inherit;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 768px) {
+  .player-control-button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 }

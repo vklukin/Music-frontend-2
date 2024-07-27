@@ -1,9 +1,10 @@
 import { useAtomValue } from "jotai";
 
 import "./style.css";
-import { PlayerControlButton } from "@components/atoms/PlayerControlButton";
 import { isAudioPlayingAtom } from "@core/atoms/PlayerControls";
-import { PageWidthContainer } from "../../molecules/Container";
+
+import { PlayerControlButton } from "@components/atoms/PlayerControlButton";
+import { PageWidthContainer } from "@components/molecules/Container";
 
 export const PlayerControls = () => {
   const isAudioPlaying = useAtomValue(isAudioPlayingAtom);

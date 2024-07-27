@@ -12,7 +12,7 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export const PlayerControlButton = (props: ButtonProps) => {
-  const { iconType } = props;
+  const { iconType, ...restProps } = props;
 
   const Icon: {
     [T in ButtonProps["iconType"]]: React.ReactNode;
@@ -24,7 +24,10 @@ export const PlayerControlButton = (props: ButtonProps) => {
   };
 
   return (
-    <button className={cn("player-control-button", props.className)} {...props}>
+    <button
+      className={cn("player-control-button", props.className)}
+      {...restProps}
+    >
       {Icon[iconType]}
     </button>
   );

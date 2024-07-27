@@ -21,3 +21,10 @@ html.dark .player-controls {
   display: flex;
   align-items: center;
 }
+
+.player-controls__buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.3rem;
+}
