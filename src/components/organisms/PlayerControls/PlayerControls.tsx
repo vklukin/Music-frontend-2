@@ -1,7 +1,7 @@
 import { useAtomValue } from "jotai";
 
 import "./style.css";
-import { isAudioPlayingAtom } from "@core/atoms/PlayerControls";
+import { isAudioPlayingAtom } from "@/core/atoms/Player";
 
 import { PlayerControlButton } from "@components/atoms/PlayerControlButton";
 import { PageWidthContainer } from "@components/molecules/Container";
