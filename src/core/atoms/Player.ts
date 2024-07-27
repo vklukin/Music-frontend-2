@@ -4,4 +4,6 @@ export const isAudioPlayingAtom = atom<boolean>(false);
 
 export const currentAudioDurationAtom = atom<number>(0);
 
-export const audioAtom = atom<HTMLAudioElement>(new Audio());
+const audio = new Audio();
+audio.crossOrigin = "anonymous";
+export const audioAtom = atom<HTMLAudioElement>(audio);

@@ -2,20 +2,23 @@ import { useAtomValue, useSetAtom } from "jotai";
 import { useCallback, useMemo } from "react";
 
 import { audioAtom, isAudioPlayingAtom } from "@atoms/Player";
+import { useAudioHooks } from "./useAudio.hooks";
 
-type useAudioResponse = () => {
-  play: () => Promise<void>;
+export interface useAudioResponse {
+  play: () => void;
   pause: () => void;
-  toggle: () => Promise<void>;
-};
+  toggle: () => void;
+}
+type useAudioFunction = () => useAudioResponse;
 
 let actx: AudioContext | null = null;
 
-export const useAudio: useAudioResponse = () => {
+export const useAudio: useAudioFunction = () => {
   const audio = useAtomValue(audioAtom);
+
   const isAudioPlaying = useSetAtom(isAudioPlayingAtom);
 
-  const play = useCallback<() => Promise<void>>(async () => {
+  const play = useCallback<() => void>(() => {
     if (!actx) {
       actx = new AudioContext();
       const audioVolume = actx.createGain();
@@ -23,13 +26,13 @@ export const useAudio: useAudioResponse = () => {
 
       source.connect(audioVolume);
       audioVolume.connect(actx.destination);
-      await actx.resume();
+      void actx.resume();
     }
     if (actx.state === "suspended") {
-      await actx.resume();
+      void actx.resume();
     }
     isAudioPlaying(true);
-    await audio.play();
+    void audio.play();
   }, [audio, isAudioPlaying]);
 
   const pause = useCallback<() => void>(() => {
@@ -37,14 +40,16 @@ export const useAudio: useAudioResponse = () => {
     audio.pause();
   }, [audio, isAudioPlaying]);
 
-  const toggle = useCallback<() => Promise<void>>(async () => {
+  const toggle = useCallback<() => void>(() => {
     if (!audio.paused) {
       pause();
       return;
     }
 
-    await play();
+    void play();
   }, [audio.paused, pause, play]);
+
+  useAudioHooks({ toggle });
 
   return useMemo(
     () => ({

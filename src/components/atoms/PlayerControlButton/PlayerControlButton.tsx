@@ -1,6 +1,7 @@
 import cn from "classnames";
 
 import "./style.css";
+import { useAudio } from "@core/hooks/useAudio";
 
 import { ReactComponent as Pause } from "@assets/pause.svg";
 import { ReactComponent as Play } from "@assets/play.svg";
@@ -12,7 +13,9 @@ type ButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 };
 
 export const PlayerControlButton = (props: ButtonProps) => {
-  const { iconType, ...restProps } = props;
+  const { iconType, onClick, ...restProps } = props;
+
+  const { play, pause } = useAudio();
 
   const Icon: {
     [T in ButtonProps["iconType"]]: React.ReactNode;
@@ -23,9 +26,29 @@ export const PlayerControlButton = (props: ButtonProps) => {
     play: <Play />
   };
 
+  const onButtonClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    onClick && onClick(e);
+
+    switch (iconType) {
+      case "pause":
+        pause();
+        break;
+      case "play":
+        play();
+        break;
+    }
+  };
+
   return (
     <button
-      className={cn("player-control-button", props.className)}
+      className={cn(
+        "player-control-button",
+        `player-control-button--${iconType}`,
+        props.className
+      )}
+      onClick={onButtonClick}
       {...restProps}
     >
       {Icon[iconType]}
