@@ -15,3 +15,9 @@
 html.dark .player-controls {
   --box-shadow-color: var(--dark-player-controls-box-shadow-color);
 }
+
+.player-controls__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
