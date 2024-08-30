@@ -15,8 +15,7 @@ let actx: AudioContext | null = null;
 
 export const useAudio: useAudioFunction = () => {
   const audio = useAtomValue(audioAtom);
-
-  const isAudioPlaying = useSetAtom(isAudioPlayingAtom);
+  const setIsAudioPlaying = useSetAtom(isAudioPlayingAtom);
 
   const play = useCallback<() => void>(() => {
     if (!actx) {
@@ -28,17 +27,19 @@ export const useAudio: useAudioFunction = () => {
       audioVolume.connect(actx.destination);
       void actx.resume();
     }
+
     if (actx.state === "suspended") {
       void actx.resume();
     }
-    isAudioPlaying(true);
+
+    setIsAudioPlaying(true);
     void audio.play();
-  }, [audio, isAudioPlaying]);
+  }, [audio, setIsAudioPlaying]);
 
   const pause = useCallback<() => void>(() => {
-    isAudioPlaying(false);
+    setIsAudioPlaying(false);
     audio.pause();
-  }, [audio, isAudioPlaying]);
+  }, [audio, setIsAudioPlaying]);
 
   const toggle = useCallback<() => void>(() => {
     if (!audio.paused) {

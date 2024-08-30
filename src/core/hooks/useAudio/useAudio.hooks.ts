@@ -10,6 +10,7 @@ export const useAudioHooks = ({ toggle }: useAudioHooksProps) => {
   useEffect(() => {
     window.addEventListener("keydown", (e) => {
       switch (e.code) {
+        case "KeyK":
         case "Space":
           toggle();
           break;
