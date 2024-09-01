@@ -1,22 +1,25 @@
+import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
-
-import { Router } from "./Router";
-import { Header } from "@components/organisms/Header";
-import { PlayerControls } from "@components/organisms/PlayerControls";
 
 import { useAppHooks } from "./App.hooks";
 import "./app.css";
 
+import { Router } from "./Router";
+import { Header } from "@components/organisms/Header";
+import { PlayerControls } from "@components/organisms/PlayerControls";
+import { Loader } from "./components/atoms/Loader";
+
 function App() {
   useAppHooks();
 
-  // TODO: add Suspense component + loading image
   return (
     <div className="layout layout--main">
       <Header />
       <div className="layout__body">
         <BrowserRouter>
-          <Router />
+          <Suspense fallback={<Loader centered />}>
+            <Router />
+          </Suspense>
         </BrowserRouter>
       </div>
       <PlayerControls />
