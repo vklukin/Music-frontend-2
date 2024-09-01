@@ -1,7 +1,7 @@
 import { useAtomValue, useSetAtom } from "jotai";
 import { useCallback, useMemo } from "react";
 
-import { audioAtom, isAudioPlayingAtom } from "@atoms/Player";
+import { audioAtom, isAudioPlayingAtom } from "@/core/atoms/player";
 import { useAudioHooks } from "./useAudio.hooks";
 
 export interface useAudioResponse {

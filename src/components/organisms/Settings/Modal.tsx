@@ -1,7 +1,7 @@
 import { useAtom } from "jotai";
 
 import { Modal } from "@components/templates/Modal";
-import { isSettingsModalOpen } from "@atoms/Settings";
+import { isSettingsModalOpen } from "@/core/atoms/settings";
 import ThemeSwitcher from "@components/molecules/ThemeSwitcher";
 
 export const SettingsModal = () => {

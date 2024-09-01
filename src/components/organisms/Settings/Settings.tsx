@@ -1,7 +1,7 @@
 import { useSetAtom } from "jotai";
 import cn from "classnames";
 
-import { isSettingsModalOpen } from "@atoms/Settings";
+import { isSettingsModalOpen } from "@/core/atoms/settings";
 import { SettingsModal } from "./Modal";
 
 import { ReactComponent as SettingsIcon } from "@assets/settings.svg";
