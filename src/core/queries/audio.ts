@@ -6,7 +6,7 @@ import { AudioListItem } from "../models/audio";
 export const audioListAtom = atomWithQuery(() => ({
   queryKey: ["audio", "list"],
   queryFn: async () => {
-    const res = await Api.get<AudioListItem>("/audio/list");
+    const res = await Api.get<AudioListItem[]>("/audio/list");
     return res.data;
   }
 }));
