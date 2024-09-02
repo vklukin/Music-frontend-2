@@ -1,30 +1,43 @@
 import cn from "classnames";
+import { CSSProperties } from "react";
 
 import "./style.css";
+import { omitEmptyProps } from "../../../core/utils/omitEmptyProps";
 
 type Props = {
   loaderSize?: string;
   className?: string | string[];
   centered?: boolean;
+  loaderColor?: string;
 };
 
 export const Loader: React.FC<Props> = ({
   loaderSize,
   centered,
-  className
+  className,
+  loaderColor
 }) => {
+  const styles = {
+    "--size": loaderSize ?? "6rem",
+    "--loader-color": loaderColor
+  };
+
   return (
     <div
       className={cn(
         "loader",
-        `--size: ${loaderSize ?? "6rem"};`,
         {
           "loader--centered": centered
         },
         className
       )}
     >
-      <span className="loader__body"></span>
+      <span
+        className={cn("loader__body", {
+          "loader__body--custom-color": loaderColor
+        })}
+        style={omitEmptyProps(styles) as CSSProperties}
+      ></span>
     </div>
   );
 };

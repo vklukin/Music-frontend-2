@@ -1,9 +1,17 @@
 .loader {
+  --body-color: var(--loader-color);
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 5rem;
-  height: 5rem;
+}
+
+.loader__body--custom-color {
+  --body-color: var(--loader-color);
+}
+
+html.dark .loader {
+  --body-color: var(--dark-loader-color);
 }
 
 .loader--centered {
@@ -26,7 +34,7 @@
   box-sizing: border-box;
   width: inherit;
   border-radius: 50%;
-  border: 2px solid #fff;
+  border: 2px solid var(--body-color);
   position: absolute;
   left: 0;
   top: 0;

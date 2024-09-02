@@ -1,8 +1,10 @@
 import { useAtomValue } from "jotai";
 
+import "./style.css";
 import { audioListAtom } from "../../../core/queries/audio";
 
 import { Loader } from "../../atoms/Loader";
+import { AudioItem } from "../../molecules/AudioItem";
 
 export const AudioList = () => {
   const { data, isLoading, isError } = useAtomValue(audioListAtom);
@@ -19,7 +21,7 @@ export const AudioList = () => {
     );
   }
 
-  if (isError || !data) {
+  if (isError || !data?.length) {
     return (
       <Container>
         <p className="audio-list__loader">
@@ -31,7 +33,11 @@ export const AudioList = () => {
 
   return (
     <Container>
-      <div className="audio-list__body"></div>
+      <div className="audio-list__body">
+        {data.map((audio) => (
+          <AudioItem key={audio.id} audioData={audio} />
+        ))}
+      </div>
     </Container>
   );
 };
