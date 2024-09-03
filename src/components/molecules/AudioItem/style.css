@@ -1,0 +1,12 @@
+.audio-element {
+  width: 100%;
+  padding: 0 10px;
+}
+
+.audio-element:hover {
+  background-color: var(--audio-element-bg-color-hovered);
+}
+
+html.dark .audio-element:hover {
+  background-color: var(--dark-audio-element-bg-color-hovered);
+}

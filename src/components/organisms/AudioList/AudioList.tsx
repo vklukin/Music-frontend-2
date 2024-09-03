@@ -24,7 +24,7 @@ export const AudioList = () => {
   if (isError || !data?.length) {
     return (
       <Container>
-        <p className="audio-list__loader">
+        <p className="audio-list__error">
           Произошла ошибка при загрузке музыки
         </p>
       </Container>
@@ -33,11 +33,9 @@ export const AudioList = () => {
 
   return (
     <Container>
-      <div className="audio-list__body">
-        {data.map((audio) => (
-          <AudioItem key={audio.id} audioData={audio} />
-        ))}
-      </div>
+      {data.map((audio) => (
+        <AudioItem key={audio.id} audioData={audio} />
+      ))}
     </Container>
   );
 };

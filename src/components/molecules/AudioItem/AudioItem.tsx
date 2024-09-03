@@ -1,10 +1,14 @@
+import "./style.css";
+
 import { AudioListItem } from "../../../core/models/audio";
 
 type Props = {
   audioData: AudioListItem;
 };
 
-export const AudioItem: React.FC<Props> = () => {
+export const AudioItem: React.FC<Props> = ({ audioData }) => {
+  console.log(audioData);
+
   // TODO: add duration time
   return (
     <div className="audio-element">
