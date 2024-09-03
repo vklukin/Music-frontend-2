@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import { useAppHooks } from "./App.hooks";
-import "./app.css";
+import "./app.scss";
 
 import { Router } from "./Router";
 import { Header } from "@components/organisms/Header";

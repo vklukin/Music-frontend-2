@@ -1,6 +1,6 @@
 import { useAtomValue } from "jotai";
 
-import "./style.css";
+import "./style.scss";
 import { isAudioPlayingAtom } from "@/core/atoms/player";
 
 import { PlayerControlButton } from "@components/atoms/PlayerControlButton";

@@ -1,6 +1,6 @@
 import cn from "classnames";
 
-import "./style.css";
+import "./style.scss";
 import { useAudio } from "@core/hooks/useAudio";
 
 import { ReactComponent as Pause } from "@assets/pause.svg";

@@ -2,7 +2,7 @@ import cn from "classnames";
 
 import { TitledContent } from "@components/atoms/TitledContent";
 
-import "./style.css";
+import "./style.scss";
 import { useTheme } from "@core/hooks/useTheme";
 
 export default function ThemeSwitcher() {

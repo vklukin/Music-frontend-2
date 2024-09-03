@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { CSSProperties } from "react";
 
-import "./style.css";
+import "./style.scss";
 import { omitEmptyProps } from "../../../core/utils/omitEmptyProps";
 
 type Props = {

@@ -1,6 +1,6 @@
 import { useAtomValue } from "jotai";
 
-import "./style.css";
+import "./style.scss";
 import { audioListAtom } from "../../../core/queries/audio";
 
 import { Loader } from "../../atoms/Loader";

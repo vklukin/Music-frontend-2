@@ -1,7 +1,7 @@
 import cn from "classnames";
 import { createPortal } from "react-dom";
 
-import "./style.css";
+import "./style.scss";
 
 type Props = {
   classNames?: {
