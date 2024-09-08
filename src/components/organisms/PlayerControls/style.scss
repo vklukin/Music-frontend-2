@@ -1,0 +1,36 @@
+.player-controls {
+  --box-shadow-color: var(--player-controls-box-shadow-color);
+
+  height: 4rem;
+  width: 100%;
+  box-shadow: 0px -0.15rem 0.5rem 0 var(--box-shadow-color);
+}
+
+@media (min-width: 768px) {
+  .player-controls {
+    height: 6rem;
+  }
+}
+
+html.dark .player-controls {
+  --box-shadow-color: var(--dark-player-controls-box-shadow-color);
+}
+
+.player-controls__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.player-controls__buttons-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+@media (min-width: 768px) {
+  .player-controls__buttons-wrapper {
+    gap: 1.3rem;
+  }
+}

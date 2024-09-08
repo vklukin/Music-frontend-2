@@ -1,4 +1,4 @@
-import "./style.css";
+import "./style.scss";
 
 import { Logo } from "@components/atoms/Logo";
 import { HeaderNavigation } from "@components/molecules/Header/Navigation";

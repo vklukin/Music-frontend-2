@@ -1,7 +1,7 @@
 import cn from "classnames";
 
 import { ReactComponent as LogoIcon } from "@assets/Logo.svg";
-import "./style.css";
+import "./style.scss";
 
 type Props = {
   containerStyles?: string;

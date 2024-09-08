@@ -1,10 +1,13 @@
+import { Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
+
+import { useAppHooks } from "./App.hooks";
+import "./app.scss";
 
 import { Router } from "./Router";
 import { Header } from "@components/organisms/Header";
-
-import { useAppHooks } from "./App.hooks";
-import "./app.css";
+import { PlayerControls } from "@components/organisms/PlayerControls";
+import { Loader } from "./components/atoms/Loader";
 
 function App() {
   useAppHooks();
@@ -12,9 +15,14 @@ function App() {
   return (
     <div className="layout layout--main">
       <Header />
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
+      <div className="layout__body">
+        <BrowserRouter>
+          <Suspense fallback={<Loader centered />}>
+            <Router />
+          </Suspense>
+        </BrowserRouter>
+      </div>
+      <PlayerControls />
     </div>
   );
 }

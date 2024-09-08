@@ -20,6 +20,8 @@
 
   --header-box-shadow-color: var(--main-color);
   --dark-header-box-shadow-color: var(--dark-main-color);
+  --player-controls-box-shadow-color: var(--main-color);
+  --dark-player-controls-box-shadow-color: var(--dark-main-color);
 
   --modal-backdrop-color: rgba(0 0 0 / 0.5);
   --dark-modal-backdrop-color: rgba(0, 0, 0, 0.5);
@@ -36,4 +38,13 @@
   --theme-switcher-border-radius: 50px;
   --theme-switcher-circle-color: var(--main-color);
   --active-theme-switcher-circle-color: var(--dark-main-color);
+
+  --player-controls-button-color: var(--main-color);
+  --dark-player-controls-button-color: var(--dark-main-color);
+
+  --loader-color: var(--main-color);
+  --dark-loader-color: #fff;
+
+  --audio-element-bg-color-hovered: rgba(0, 0, 255, 0.1);
+  --dark-audio-element-bg-color-hovered: rgba(255, 255, 255, 0.1);
 }

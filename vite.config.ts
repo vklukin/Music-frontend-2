@@ -17,5 +17,15 @@ export default defineConfig({
       },
       include: "**/*.svg"
     })
-  ]
+  ],
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
+          @import "./src/styles/fonts";
+          @import "./src/styles/variables";
+        `
+      }
+    }
+  }
 });
