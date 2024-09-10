@@ -4,6 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  line-height: 1.14;
+  font-family: var(--body-font);
 }
 
 html {
@@ -30,7 +32,6 @@ html {
 
 a,
 p {
-  font-family: var(--body-font);
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.3rem;
@@ -49,7 +50,7 @@ html.dark p {
 }
 
 *[hidden] {
-  display: none;
+  display: none !important;
 }
 
 ul {
